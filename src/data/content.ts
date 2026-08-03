@@ -185,7 +185,7 @@ export const content: Record<Language, SiteContent> = {
       title: "Celebration Details",
       date: {
         label: "Date",
-        value: "Thursday evening, September 10, 2026",
+        value: "Thursday evening September 10, 2026",
       },
       time: {
         label: "Time",
