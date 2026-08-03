@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Not committed: a Windows-generated lockfile does not reliably capture
+# every platform-specific optional dependency (e.g. Tailwind's Oxide
+# native/WASM binaries) needed by npm ci/install on Linux CI runners.
+# Letting npm resolve fresh on each platform avoids that mismatch.
+package-lock.json
+
 # Claude Code local settings
 .claude/
 
