@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#b8935a" stroke-width="2.5" />
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#b8935a" stroke-width="1" opacity="0.5" />
+  <text x="25" y="39" text-anchor="middle" font-family="'Aref Ruqaa', 'Traditional Arabic', serif" font-size="28" fill="#b8935a">م</text>
+  <text x="41" y="39" text-anchor="middle" font-family="'Aref Ruqaa', 'Traditional Arabic', serif" font-size="28" fill="#b8935a" opacity="0.92">غ</text>
+</svg>
