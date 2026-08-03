@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import FloralOrnament from "./FloralOrnament";
+import photo1 from "../assets/photo1.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -122,7 +123,25 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          custom={0.65}
+          custom={0.6}
+          variants={fadeUp}
+          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full p-1.5"
+          style={{ border: "1px solid var(--color-gold-light)" }}
+        >
+          <div
+            className="w-full h-full rounded-full overflow-hidden"
+            style={{ border: "2px solid var(--color-gold)" }}
+          >
+            <img
+              src={photo1}
+              alt={`${t.hero.groom} & ${t.hero.bride}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          custom={0.7}
           variants={fadeUp}
           className="flex items-center justify-center gap-12 sm:gap-24 mt-4"
         >
