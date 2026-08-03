@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import FloralOrnament from "./FloralOrnament";
+import ShareButtons from "./ShareButtons";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -30,6 +31,8 @@ export default function Footer() {
       >
         {t.footer.hashtag}
       </motion.p>
+
+      <ShareButtons />
     </footer>
   );
 }

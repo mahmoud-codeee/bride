@@ -45,6 +45,19 @@ export interface SiteContent {
     title: string;
     note: string;
   };
+  calendar: {
+    title: string;
+    googleButton: string;
+    icsButton: string;
+    eventTitle: string;
+    eventDescription: string;
+  };
+  share: {
+    whatsapp: string;
+    copyLink: string;
+    copied: string;
+    message: string;
+  };
   footer: {
     message: string;
     hashtag: string;
@@ -104,6 +117,19 @@ export const content: Record<Language, SiteContent> = {
       title: "قواعد الملابس",
       note: "يُرجى التكرم بارتداء إطلالة محتشمة وأنيقة تليق بأجواء الحفل.",
     },
+    calendar: {
+      title: "احفظوا الموعد",
+      googleButton: "أضف إلى تقويم Google",
+      icsButton: "أضف إلى التقويم (Apple/Outlook)",
+      eventTitle: "حفل زفاف محمد وغادة",
+      eventDescription: "بدعوتكم لحضور حفل زفافنا 🤍",
+    },
+    share: {
+      whatsapp: "شارك عبر واتساب",
+      copyLink: "نسخ الرابط",
+      copied: "تم نسخ الرابط!",
+      message: "بدعوتكم لحضور حفل زفاف محمد وغادة 🤍",
+    },
     footer: {
       message: "بحضوركم تكتمل فرحتنا 🤍",
       hashtag: "#Mohamed_Ghada2026",
@@ -160,6 +186,19 @@ export const content: Record<Language, SiteContent> = {
     dressCode: {
       title: "Dress Code",
       note: "Kindly wear modest, elegant attire befitting the spirit of the occasion.",
+    },
+    calendar: {
+      title: "Save the Date",
+      googleButton: "Add to Google Calendar",
+      icsButton: "Add to Calendar (Apple/Outlook)",
+      eventTitle: "Mohamed & Ghada's Wedding",
+      eventDescription: "Join us to celebrate the wedding of Mohamed & Ghada.",
+    },
+    share: {
+      whatsapp: "Share via WhatsApp",
+      copyLink: "Copy Link",
+      copied: "Link Copied!",
+      message: "You're invited to Mohamed & Ghada's wedding 🤍",
     },
     footer: {
       message: "Our joy is complete with your presence 🤍",
