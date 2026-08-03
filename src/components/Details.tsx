@@ -31,7 +31,7 @@ function DetailCard({
         {label}
       </span>
       <span
-        className={`${t.meta.fontBody} text-lg sm:text-xl text-center leading-snug`}
+        className={`${t.meta.fontBody} text-lg sm:text-xl text-center leading-snug whitespace-pre-line`}
         style={{ color: "var(--color-wine-dark)" }}
       >
         {value}

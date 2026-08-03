@@ -108,7 +108,7 @@ export const content: Record<Language, SiteContent> = {
       title: "تفاصيل الحفل",
       date: {
         label: "التاريخ",
-        value: "مساء الخميس ١٠ سبتمبر ٢٠٢٦",
+        value: "مساء الخميس\n10/9/2026",
       },
       time: {
         label: "الموعد",
@@ -185,7 +185,7 @@ export const content: Record<Language, SiteContent> = {
       title: "Celebration Details",
       date: {
         label: "Date",
-        value: "Thursday evening September 10, 2026",
+        value: "Thursday evening\n10/9/2026",
       },
       time: {
         label: "Time",
