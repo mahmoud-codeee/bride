@@ -125,7 +125,7 @@ export default function Hero() {
         <motion.div
           custom={0.6}
           variants={fadeUp}
-          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full p-1.5"
+          className="w-36 h-36 sm:w-48 sm:h-48 rounded-full p-2"
           style={{ border: "1px solid var(--color-gold-light)" }}
         >
           <div
@@ -146,19 +146,19 @@ export default function Hero() {
           className="flex items-center justify-center gap-12 sm:gap-24 mt-4"
         >
           <h1
-            className={`${t.meta.fontHeading} text-4xl sm:text-6xl`}
+            className={`${t.meta.fontHeading} text-5xl sm:text-7xl`}
             style={{ color: "var(--color-wine-dark)" }}
           >
             {t.hero.groom}
           </h1>
           <span
-            className={`${t.meta.fontHeading} text-2xl sm:text-4xl`}
+            className={`${t.meta.fontHeading} text-3xl sm:text-5xl`}
             style={{ color: "var(--color-gold)" }}
           >
             {t.hero.ampersand}
           </span>
           <h1
-            className={`${t.meta.fontHeading} text-4xl sm:text-6xl`}
+            className={`${t.meta.fontHeading} text-5xl sm:text-7xl`}
             style={{ color: "var(--color-wine-dark)" }}
           >
             {t.hero.bride}
