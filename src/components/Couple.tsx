@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import FloralOrnament from "./FloralOrnament";
+import photo3 from "../assets/photo3.jpg";
 
 export default function Couple() {
   return (
@@ -76,6 +77,22 @@ export default function Couple() {
             strokeLinejoin="round"
           />
         </svg>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        className="w-full max-w-sm sm:max-w-md rounded-2xl p-1.5"
+        style={{ border: "1px solid var(--color-gold-light)" }}
+      >
+        <div
+          className="rounded-xl overflow-hidden"
+          style={{ border: "1.5px solid var(--color-gold)" }}
+        >
+          <img src={photo3} alt="" className="w-full h-auto object-cover" />
+        </div>
       </motion.div>
     </section>
   );
