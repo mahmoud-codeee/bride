@@ -146,19 +146,19 @@ export default function Hero() {
           className="flex items-center justify-center gap-12 sm:gap-24 mt-4"
         >
           <h1
-            className={`${t.meta.fontHeading} text-5xl sm:text-7xl`}
+            className={`${t.meta.fontHeading} text-4xl sm:text-7xl`}
             style={{ color: "var(--color-wine-dark)" }}
           >
             {t.hero.groom}
           </h1>
           <span
-            className={`${t.meta.fontHeading} text-3xl sm:text-5xl`}
+            className={`${t.meta.fontHeading} text-2xl sm:text-5xl`}
             style={{ color: "var(--color-gold)" }}
           >
             {t.hero.ampersand}
           </span>
           <h1
-            className={`${t.meta.fontHeading} text-5xl sm:text-7xl`}
+            className={`${t.meta.fontHeading} text-4xl sm:text-7xl`}
             style={{ color: "var(--color-wine-dark)" }}
           >
             {t.hero.bride}
