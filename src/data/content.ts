@@ -108,7 +108,7 @@ export const content: Record<Language, SiteContent> = {
       title: "تفاصيل الحفل",
       date: {
         label: "التاريخ",
-        value: "مساء الخميس، ١٠ سبتمبر ٢٠٢٦",
+        value: "مساء الخميس ١٠ سبتمبر ٢٠٢٦",
       },
       time: {
         label: "الموعد",
