@@ -73,7 +73,7 @@ export default function Hero() {
           {t.hero.verses.map((verse, i) => (
             <p
               key={i}
-              className={`${t.meta.fontBody} text-sm sm:text-base italic`}
+              className={`${t.meta.fontBody} text-lg sm:text-xl italic`}
               style={{ color: "var(--color-wine)" }}
             >
               {verse}
