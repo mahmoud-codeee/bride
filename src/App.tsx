@@ -7,6 +7,7 @@ import Details from "./components/Details";
 import AddToCalendar from "./components/AddToCalendar";
 import DressCode from "./components/DressCode";
 import Couple from "./components/Couple";
+import GuestWishes from "./components/GuestWishes";
 import Footer from "./components/Footer";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <AddToCalendar />
         <DressCode />
         <Couple />
+        <GuestWishes />
         <Footer />
       </div>
     </LanguageProvider>

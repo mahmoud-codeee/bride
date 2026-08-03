@@ -58,6 +58,12 @@ export interface SiteContent {
     copied: string;
     message: string;
   };
+  wishes: {
+    title: string;
+    note: string;
+    buttonLabel: string;
+    formUrl: string;
+  };
   footer: {
     message: string;
     hashtag: string;
@@ -130,6 +136,13 @@ export const content: Record<Language, SiteContent> = {
       copied: "تم نسخ الرابط!",
       message: "بدعوتكم لحضور حفل زفاف محمد وغادة 🤍",
     },
+    wishes: {
+      title: "شاركونا تهنئتكم",
+      note: "يسعدنا أن نقرأ كلماتكم وتهانيكم لنا بمناسبة زفافنا 🤍",
+      buttonLabel: "اكتب لنا تهنئة",
+      formUrl:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfM4yOIUUHG792xci_wq0f-S933sz_8okNsCCk_pNu3vL9gLg/viewform",
+    },
     footer: {
       message: "بحضوركم تكتمل فرحتنا 🤍",
       hashtag: "#Mohamed_Ghada2026",
@@ -199,6 +212,13 @@ export const content: Record<Language, SiteContent> = {
       copyLink: "Copy Link",
       copied: "Link Copied!",
       message: "You're invited to Mohamed & Ghada's wedding 🤍",
+    },
+    wishes: {
+      title: "Leave Us a Wish",
+      note: "We'd love to read your congratulations and well wishes for our wedding 🤍",
+      buttonLabel: "Write Us a Wish",
+      formUrl:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfM4yOIUUHG792xci_wq0f-S933sz_8okNsCCk_pNu3vL9gLg/viewform",
     },
     footer: {
       message: "Our joy is complete with your presence 🤍",
