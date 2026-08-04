@@ -4,19 +4,27 @@ import { useLanguage } from "../context/LanguageContext";
 import FloralOrnament from "./FloralOrnament";
 import photo1 from "../assets/photo1.jpg";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (delay: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, delay, ease: "easeOut" as const },
-  }),
-};
+interface HeroProps {
+  revealed: boolean;
+}
 
-export default function Hero() {
+export default function Hero({ revealed }: HeroProps) {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 24 },
+    visible: (delay: number = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: prefersReducedMotion ? 0.35 : 0.8,
+        delay: prefersReducedMotion ? 0 : delay,
+        ease: "easeOut" as const,
+      },
+    }),
+  };
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -40,13 +48,41 @@ export default function Hero() {
     >
       <motion.div
         style={{ y: yTop }}
-        className="absolute top-4 start-4 w-24 h-24 sm:w-36 sm:h-36 opacity-80"
+        className="absolute top-4 start-4 w-24 h-24 sm:w-36 sm:h-36"
+        initial="hidden"
+        animate={revealed ? "visible" : "hidden"}
+        custom={0}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: (delay: number) => ({
+            opacity: 0.8,
+            transition: {
+              duration: prefersReducedMotion ? 0.35 : 0.8,
+              delay: prefersReducedMotion ? 0 : delay,
+              ease: "easeOut" as const,
+            },
+          }),
+        }}
       >
         <FloralOrnament className="w-full h-full" />
       </motion.div>
       <motion.div
         style={{ y: yBottom }}
-        className="absolute bottom-4 end-4 w-24 h-24 sm:w-36 sm:h-36 opacity-80"
+        className="absolute bottom-4 end-4 w-24 h-24 sm:w-36 sm:h-36"
+        initial="hidden"
+        animate={revealed ? "visible" : "hidden"}
+        custom={0}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: (delay: number) => ({
+            opacity: 0.8,
+            transition: {
+              duration: prefersReducedMotion ? 0.35 : 0.8,
+              delay: prefersReducedMotion ? 0 : delay,
+              ease: "easeOut" as const,
+            },
+          }),
+        }}
       >
         <FloralOrnament className="w-full h-full" flip />
       </motion.div>
@@ -54,10 +90,10 @@ export default function Hero() {
       <motion.div
         className="relative z-10 max-w-2xl w-full text-center flex flex-col items-center gap-8"
         initial="hidden"
-        animate="visible"
+        animate={revealed ? "visible" : "hidden"}
       >
         <motion.p
-          custom={0}
+          custom={0.1}
           variants={fadeUp}
           className={`${t.meta.fontHeading} text-xl sm:text-2xl font-bold tracking-wide`}
           style={{ color: "var(--color-gold-deep)" }}

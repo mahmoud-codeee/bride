@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { LanguageProvider } from "./context/LanguageContext";
 import LanguageToggle from "./components/LanguageToggle";
+import EnvelopeIntro from "./components/EnvelopeIntro";
 import Petals from "./components/Petals";
+import PetalBurst from "./components/PetalBurst";
 import Hero from "./components/Hero";
 import Countdown from "./components/Countdown";
 import Details from "./components/Details";
@@ -11,6 +14,8 @@ import GuestWishes from "./components/GuestWishes";
 import Footer from "./components/Footer";
 
 function App() {
+  const [envelopeOpened, setEnvelopeOpened] = useState(false);
+
   return (
     <LanguageProvider>
       <div
@@ -18,8 +23,10 @@ function App() {
         style={{ backgroundColor: "var(--color-ivory)" }}
       >
         <Petals />
+        <PetalBurst active={envelopeOpened} />
         <LanguageToggle />
-        <Hero />
+        <EnvelopeIntro onOpen={() => setEnvelopeOpened(true)} />
+        <Hero revealed={envelopeOpened} />
         <Countdown />
         <Details />
         <AddToCalendar />

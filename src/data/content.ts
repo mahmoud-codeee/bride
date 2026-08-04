@@ -6,6 +6,9 @@ export interface SiteContent {
     fontHeading: string;
     fontBody: string;
   };
+  envelope: {
+    invite: string;
+  };
   hero: {
     basmala: string;
     verses: string[];
@@ -79,6 +82,9 @@ export const content: Record<Language, SiteContent> = {
       dir: "rtl",
       fontHeading: "font-arabic-heading",
       fontBody: "font-arabic-body",
+    },
+    envelope: {
+      invite: "بالحب ندعوكم",
     },
     hero: {
       basmala: "بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ",
@@ -156,6 +162,9 @@ export const content: Record<Language, SiteContent> = {
       dir: "ltr",
       fontHeading: "font-english-heading",
       fontBody: "font-english-body",
+    },
+    envelope: {
+      invite: "With love, we invite you",
     },
     hero: {
       basmala: "In the name of Allah, the Most Gracious, the Most Merciful",
